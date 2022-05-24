@@ -1,0 +1,29 @@
+<form [formGroup]="FormItem">
+    <ion-row>
+      <ion-col size="1" class="ion-no-padding"></ion-col>
+      <ion-col size="11" class="ion-no-padding">
+        <ion-item *ngIf="isValid('province')" class="invalid-msg">
+          <span>
+            กรุณากรอกข้อมูล
+          </span>
+        </ion-item>
+        <ion-item color="light">
+          <ion-input  placeholder="จังหวัด" formControlName="province"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="1" class="ion-no-padding"></ion-col>
+      <ion-col size="11" class="ion-no-padding">
+        <ion-item *ngIf="isValid('zipcode')" class="invalid-msg">
+          <span>
+            กรุณากรอกข้อมูล
+          </span>
+        </ion-item>
+        <ion-item color="light">
+          <ion-input placeholder="รหัสไปรษณีย์" formControlName="zipcode"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+</form>
